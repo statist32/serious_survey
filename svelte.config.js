@@ -19,7 +19,7 @@ const config = {
 		}),
 		appDir: 'internal',
 		paths: {
-			base: dev ? '' : '/your-repo-name',
+			base: dev ? '' : '/serious_survey',
 		},
 		vite: {
 			ssr: {
