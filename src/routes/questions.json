@@ -77,13 +77,13 @@
                 "subcategories": [
                     {
                         "name": "Gestaltung sozialer Beziehungen ",
-                        "characteristic": "Ich bin in der Lage soziale Beziehungen zu untergeordneten, gleichgestellten und übergeordneten Personen gewinnbringend zu gestalten",
+                        "characteristic": "Ich bin in der Lage soziale Beziehungen zu anderen Personen konstruktiv zu gestalten",
                         "description": "d.h. ich kann sichere Netzwerke aufbauen, Mitarbeiter führen, weitere Personen beraten, mit ihnen diskutieren und ggf. von meiner Meinung überzeugen, meine Stellung in der Hierarchie meines Berufes verfestigen, Anerkennung und Ideen von anderen Personen annehmen.",
                         "multiplier": 0.8
                     },
                     {
                         "name": "Gestaltung von Kommunikation",
-                        "characteristic": "Ich bin in der Lage adressatengerecht mit untergeordneten, gleichgestellten und übergeordneten Personen zu kommunizieren",
+                        "characteristic": "Ich bin in der Lage adressatengerecht mit anderen Personen zu kommunizieren",
                         "description": "d.h. ich kann um Hilfe bitten und Hilfe anbieten, Gespräche vorbereiten und führen, vorher spezifische Fragen formulieren, Grenzen kennen, sachgerecht und zielgerichtet formulieren und konstruktives Feedback geben.",
                         "multiplier": 0.6
                     },
@@ -193,13 +193,13 @@
                     },
                     {
                         "name": "Gestaltung sozialer Beziehungen",
-                        "characteristic": "Ich bin in der Lage soziale Beziehungen zu SchülerInnen, KollegInnen, Eltern und außerschulischen Akteuren gewinnbringend zu gestalten",
+                        "characteristic": "Ich bin in der Lage soziale Beziehungen zu anderen Personen konstruktiv zu gestalten",
                         "description": "d.h. ich kann jederzeit für die SchülerInnen als Zuhörer, Ratgeber oder Helfer bei Problemen da sein, konstruktive Rückmeldungen an KollegInnen geben, mich an der Schulgemeinschaft beteiligen, Kontakte zu außerschulischen Akteuren herstellen, mit diesen kooperieren und bei Beratungen hinzuziehen und mit Eltern vertrauensvoll zusammenarbeiten.",
                         "multiplier": 0.75
                     },
                     {
                         "name": "Gestaltung von Kommunikation",
-                        "characteristic": "Ich bin in der Lage adressatengerecht mit untergeordneten, gleichgestellten und übergeordneten Personen kommunizieren",
+                        "characteristic": "Ich bin in der Lage adressatengerecht anderen Personen zu kommunizieren",
                         "description": "d.h. ich kann mit den SchülerInnen innerhalb und außerhalb des Unterrichts situationsgerecht kommunizieren, verschiedene Formen der Kommunikation (nonverbal, verbal, schriftlich, visuell) lernförderlich und zur Sicherung von Teilhabe anwenden.",
                         "multiplier": 0.75
                     },
