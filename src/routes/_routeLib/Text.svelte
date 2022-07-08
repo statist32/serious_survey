@@ -28,7 +28,7 @@
 		anchorX="center"
 		interactive
 		overflowWrap="normal"
-		maxWidth="3"
+		maxWidth={3}
 		textAlign="center"
 	/>
 </Group>
