@@ -229,6 +229,15 @@
         ]
     },
     {
+        "type": "information",
+        "text": "Level 3",
+        "descriptions": [
+            "Sozialkompetenz"
+        ],
+        "descriptionsScale": 0.8,
+        "categories": []
+    },
+    {
         "name": "WissenschaftlerIn",
         "categories": [
             {
