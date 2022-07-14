@@ -68,13 +68,11 @@
 		counters[currentQuestion.jobName][currentQuestion.categoryName] +=
 			event.detail.value * currentQuestion.multiplier;
 
-		if (!currentQuestion.done) {
-			// currentQuestion = currentQuestion.value;
-			scale
-				.set(0)
-				.then(() => (currentQuestion = nxQ.next().value))
-				.then(() => scale.set(DEFAULT_TEXT_SCALE));
-		}
+		const nextQuestion = nxQ.next();
+		scale
+			.set(0)
+			.then(() => (currentQuestion = !nextQuestion.done ? nextQuestion.value : nextQuestion))
+			.then(() => scale.set(DEFAULT_TEXT_SCALE));
 	}
 
 	function calcMax() {
@@ -104,7 +102,7 @@
 	<Canvas>
 		<PerspectiveCamera position={{ x: $cameraX, y: $cameraY, z: 20 }} fov={24} near={0.5} />
 		<Mesh geometry={new SphereBufferGeometry()} material={backgroundMaterial} scale={100} />
-		{#if !currentQuestion.done}
+		{#if !currentQuestion?.done}
 			<Text
 				text={currentQuestion.itemName}
 				scale={{ x: $scale, y: $scale }}
