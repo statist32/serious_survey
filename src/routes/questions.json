@@ -20,7 +20,7 @@
         "categories": []
     },
     {
-        "name": "Wissenschaftler",
+        "name": "WissenschaftlerIn",
         "categories": [
             {
                 "name": "Fachkompetenz",
@@ -70,7 +70,7 @@
         ]
     },
     {
-        "name": "Lehrkräfte",
+        "name": "Lehrkraft",
         "categories": [
             {
                 "name": "Fachkompetenz",
@@ -129,7 +129,7 @@
         "categories": []
     },
     {
-        "name": "Wissenschaftler",
+        "name": "WissenschaftlerIn",
         "categories": [
             {
                 "name": "Humankompetenz",
@@ -179,7 +179,7 @@
         ]
     },
     {
-        "name": "Lehrkräfte",
+        "name": "Lehrkraft",
         "categories": [
             {
                 "name": "Humankompetenz",
@@ -229,66 +229,7 @@
         ]
     },
     {
-        "type": "information",
-        "text": "Level 3",
-        "descriptions": [
-            "Sozialkompetenz"
-        ],
-        "descriptionsScale": 0.8,
-        "categories": []
-    },
-    {
-        "name": "Wissenschaftler",
-        "categories": [
-            {
-                "name": "Sozialkompetenz",
-                "subcategories": [
-                    {
-                        "name": "Gestaltung sozialer Beziehungen ",
-                        "characteristic": "Ich bin in der Lage soziale Beziehungen zu anderen Personen konstruktiv zu gestalten",
-                        "descriptions": [
-                            "d.h. ich kann sichere Netzwerke aufbauen, Mitarbeiter führen, weitere Personen beraten, mit ihnen diskutieren und ggf. von meiner Meinung überzeugen, meine Stellung in der Hierarchie meines Berufes verfestigen, Anerkennung und Ideen von anderen Personen annehmen."
-                        ],
-                        "multiplier": 0.8
-                    },
-                    {
-                        "name": "Gestaltung von Kommunikation",
-                        "characteristic": "Ich bin in der Lage adressatengerecht mit anderen Personen zu kommunizieren",
-                        "descriptions": [
-                            "d.h. ich kann um Hilfe bitten und Hilfe anbieten, Gespräche vorbereiten und führen, vorher spezifische Fragen formulieren, Grenzen kennen, sachgerecht und zielgerichtet formulieren und konstruktives Feedback geben."
-                        ],
-                        "multiplier": 0.6
-                    },
-                    {
-                        "name": "Beratungskompetenz",
-                        "characteristic": "Ich verfüge über Beratungskompetenz",
-                        "descriptions": [
-                            "d.h. ich kann untergeordnete und gleichgestellte Personen beraten, kenne verschiedene Beratungsformen und kann eigene Grenzen in Beratungsgesprächen einschätzen."
-                        ],
-                        "multiplier": 0.4
-                    },
-                    {
-                        "name": "Teamfähigkeit",
-                        "characteristic": "Ich bin teamfähig",
-                        "descriptions": [
-                            "d.h. ich kann zielorientiert in einem Team arbeiten, Teammitarbeiter führen, mit ihnen interagieren, mich mit ihnen austauschen und ggf. an sie anpassen."
-                        ],
-                        "multiplier": 0.3
-                    },
-                    {
-                        "name": "Feedback- und Rückmeldekompetenz",
-                        "characteristic": "Ich verfüge über Feedback- und Rückmeldekompetenz",
-                        "descriptions": [
-                            "d.h. ich kann untergeordneten und gleichgestellten Personen konstruktives Feedback geben, Leistungen adäquat bewerten, Feedback zu einer Veranstaltung einholen und evaluieren."
-                        ],
-                        "multiplier": 0.2
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "Lehrkräfte",
+        "name": "Lehrkraft",
         "categories": [
             {
                 "name": "Sozialkompetenz",

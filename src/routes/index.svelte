@@ -1,7 +1,4 @@
 <script lang="ts">
-	/**
-	 * This scene was inspired by Paul Henschel's codesandbox here: https://codesandbox.io/s/figma-noodles-iedfg?file=/src/Noodles.js:230-1026
-	 */
 	import { elasticOut } from 'svelte/easing';
 	import { tweened } from 'svelte/motion';
 	import { SphereBufferGeometry } from 'three';
@@ -13,7 +10,12 @@
 	import { mapLinear } from 'three/src/math/MathUtils';
 	import { quintOut } from 'svelte/easing';
 	import questions from './questions.json';
-	const GAME_FINISHED_TEXT = 'Hier ist dein Ergebnis:';
+	const GAME_FINISHED_TEXT_1 = 'Ihr Ergebnis:';
+	const GAME_FINISHED_TEXT_2 = 'Übereinstimmung zum Beruf';
+	const GAME_FINISHED_TEXT_3 = 'Übereinstimmung in den einzelnen Kompetenzen';
+	const GAME_FINISHED_TEXT_4 =
+		'Bitte machen Sie nun einen Screenshot von dieser Seite und kehren Sie zur Umfrage zurück!';
+
 	const DEFAULT_TEXT_SCALE = 4;
 	const cameraX = tweened(0, { duration: 500, easing: quintOut });
 	const cameraY = tweened(0, { duration: 500, easing: quintOut });
@@ -24,7 +26,7 @@
 
 	let scale = tweened(DEFAULT_TEXT_SCALE, { easing: elasticOut, delay: 200 });
 
-	let counters = { Lehrkräfte: {}, Wissenschaftler: {} };
+	let counters = { Lehrkraft: {}, WissenschaftlerIn: {} };
 
 	function* nextQuestion() {
 		for (let question of questions) {
@@ -67,7 +69,6 @@
 		}
 		counters[currentQuestion.jobName][currentQuestion.categoryName] +=
 			event.detail.value * currentQuestion.multiplier;
-
 		const nextQuestion = nxQ.next();
 		scale
 			.set(0)
@@ -77,7 +78,7 @@
 
 	function calcMax() {
 		const MAX_ANSWER_VALUE = 5;
-		let maxScore = { Lehrkräfte: {}, Wissenschaftler: {} };
+		let maxScore = { Lehrkraft: {}, WissenschaftlerIn: {} };
 
 		for (let question of questions) {
 			for (let category of question.categories) {
@@ -94,10 +95,25 @@
 		}
 		return maxScore;
 	}
+	const COMPETENCES = ['Fachkompetenz', 'Humankompetenz', 'Sozialkompetenz'];
+	const PROFESSIONS = ['Lehrkraft', 'WissenschaftlerIn'];
 	const maxScore = calcMax();
+
+	function calcProfessionPercentage(professionCounters, professionMax) {
+		const sumProfession = Object.entries(professionCounters).reduce(
+			(prev, current) => (prev += current[1]),
+			0
+		);
+		const maxSumProfession = Object.entries(professionMax).reduce(
+			(prev, current) => (prev += current[1]),
+			0
+		);
+		// console.log(professionCounters);
+		// console.log(sumProfession, maxSumProfession);
+		return ((100 * sumProfession) / maxSumProfession).toFixed(1);
+	}
 </script>
 
-<!-- mousemove and click shift camera -->
 <div class="canvas-wrapper" on:mousemove={handleMousemove} on:click={handleMousemove}>
 	<Canvas>
 		<PerspectiveCamera position={{ x: $cameraX, y: $cameraY, z: 20 }} fov={24} near={0.5} />
@@ -127,60 +143,46 @@
 				/>
 			{/each}
 		{:else}
-			<Text text={GAME_FINISHED_TEXT} scale={{ x: $scale, y: $scale }} position={{ y: 3, z: 1 }} />
 			<Text
-				text={'Wissenschaftler'}
+				text={GAME_FINISHED_TEXT_1}
 				scale={{ x: $scale, y: $scale }}
-				position={{ x: 3, y: 2, z: 1 }}
+				position={{ y: 3, z: 1 }}
 			/>
 			<Text
-				text={`Fachkompetenz: ${Number(
-					(100 * counters['Wissenschaftler']['Fachkompetenz']) /
-						maxScore['Wissenschaftler']['Fachkompetenz']
-				).toFixed(1)}%`}
+				text={GAME_FINISHED_TEXT_2}
 				scale={{ x: $scale, y: $scale }}
-				position={{ x: 3, y: 1, z: 1 }}
+				position={{ y: 2, z: 1 }}
 			/>
 			<Text
-				text={`Humankompetenz: ${Number(
-					(100 * counters['Wissenschaftler']['Humankompetenz']) /
-						maxScore['Wissenschaftler']['Humankompetenz']
-				).toFixed(1)}%`}
+				text={GAME_FINISHED_TEXT_3}
 				scale={{ x: $scale, y: $scale }}
-				position={{ x: 3, y: 0, z: 1 }}
+				position={{ y: 0, z: 1 }}
 			/>
 			<Text
-				text={`Sozialkompetenz: ${Number(
-					(100 * counters['Wissenschaftler']['Sozialkompetenz']) /
-						maxScore['Wissenschaftler']['Sozialkompetenz']
-				).toFixed(1)}%`}
+				text={GAME_FINISHED_TEXT_4}
 				scale={{ x: $scale, y: $scale }}
-				position={{ x: 3, y: -1, z: 1 }}
+				position={{ y: -4, z: 1 }}
 			/>
-			<Text text={'Lehrkräfte'} scale={{ x: $scale, y: $scale }} position={{ x: -3, y: 2, z: 1 }} />
-			<Text
-				text={`Fachkompetenz: ${Number(
-					(100 * counters['Lehrkräfte']['Fachkompetenz']) / maxScore['Lehrkräfte']['Fachkompetenz']
-				).toFixed(1)}%`}
-				scale={{ x: $scale, y: $scale }}
-				position={{ x: -3, y: 1, z: 1 }}
-			/>
-			<Text
-				text={`Humankompetenz: ${Number(
-					(100 * counters['Lehrkräfte']['Humankompetenz']) /
-						maxScore['Lehrkräfte']['Humankompetenz']
-				).toFixed(1)}%`}
-				scale={{ x: $scale, y: $scale }}
-				position={{ x: -3, y: 0, z: 1 }}
-			/>
-			<Text
-				text={`Sozialkompetenz: ${Number(
-					(100 * counters['Lehrkräfte']['Sozialkompetenz']) /
-						maxScore['Lehrkräfte']['Sozialkompetenz']
-				).toFixed(1)}%`}
-				scale={{ x: $scale, y: $scale }}
-				position={{ x: -3, y: -1, z: 1 }}
-			/>
+
+			{#each PROFESSIONS as profession, professionIndex}
+				<Text
+					text={`${profession}: ${calcProfessionPercentage(
+						counters[profession],
+						maxScore[profession]
+					)}%`}
+					scale={{ x: $scale, y: $scale }}
+					position={{ x: 3 * Math.pow(-1, professionIndex), y: 1, z: 1 }}
+				/>
+				{#each COMPETENCES as competence, competenceIndex}
+					<Text
+						text={`${competence}: ${Number(
+							(100 * counters[profession][competence]) / maxScore[profession][competence]
+						).toFixed(1)}%`}
+						scale={{ x: $scale, y: $scale }}
+						position={{ x: 3 * Math.pow(-1, professionIndex), y: -1 * competenceIndex - 1, z: 1 }}
+					/>
+				{/each}
+			{/each}
 		{/if}
 	</Canvas>
 </div>
