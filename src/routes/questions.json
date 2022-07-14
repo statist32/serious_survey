@@ -1,5 +1,25 @@
 [
     {
+        "type": "information",
+        "text": "Herzlich Willkommen zum Serious Game 'BOfLaMa - Berufliche Orientierung für Lehramtsstudierende im Master'!",
+        "descriptions": [
+            "Im Folgenden werden Ihnen in der Mitte des Bildschirms verschiedene Aussagen angezeigt. Darum verteilt schweben Ihre Antwortmöglichkeiten.",
+            "Bitte lesen Sie die Aussagen sorgfältig. Im Anschluss schätzen Sie Ihre Fähigkeiten in Bezug auf die Aussagen ein und wählen die entsprechende Antwort aus.",
+            "Alles verstanden? Dann dürfen Sie gerne auf eine Antwortmöglichkeit klicken, um zu starten! Viel Spaß!"
+        ],
+        "descriptionsScale": 0.8,
+        "categories": []
+    },
+    {
+        "type": "information",
+        "text": "Level 1",
+        "descriptions": [
+            "Fachkompetenz"
+        ],
+        "descriptionsScale": 0.8,
+        "categories": []
+    },
+    {
         "name": "Wissenschaftler",
         "categories": [
             {
@@ -8,102 +28,42 @@
                     {
                         "name": "Fachwissen",
                         "characteristic": "Ich habe ein ausgeprägtes Fachwissen",
-                        "description": "d. h. ich kann dieses weiteren Personen vermitteln und ihnen praktische Anwendungsbereiche aufzeigen, mich in Schrift und Sprache wissenschaftlich ausdrücken und bin daher in der Lage mich mit KollegInnen auszutauschen und Arbeiten zu verfassen.",
+                        "descriptions": [
+                            "d. h. ich kann dieses weiteren Personen vermitteln und ihnen praktische Anwendungsbereiche aufzeigen, mich in Schrift und Sprache wissenschaftlich ausdrücken und bin daher in der Lage mich mit KollegInnen auszutauschen und Arbeiten zu verfassen."
+                        ],
                         "multiplier": 0.9
                     },
                     {
                         "name": "Methodenkompetenz",
                         "characteristic": "Ich verfüge über Methodenkompetenz",
-                        "description": "d. h. ich kann Lehrveranstaltungen, z. B. mithilfe von Strukturmodellen gestalten, Forschung, z. B. mithilfe von statistischen Auswertungsverfahren, durchführen und mein Methodenwissen weiteren Personen vermitteln.",
+                        "descriptions": [
+                            "d. h. ich kann Lehrveranstaltungen, z. B. mithilfe von Strukturmodellen gestalten, Forschung, z. B. mithilfe von statistischen Auswertungsverfahren, durchführen und mein Methodenwissen weiteren Personen vermitteln."
+                        ],
                         "multiplier": 0.8
                     },
                     {
                         "name": "Didaktisches Wissen",
                         "characteristic": "Ich habe ein ausgeprägtes didaktisches Wissen",
-                        "description": "d. h. ich kann mein Wissen weiteren Personen adäquat vermitteln. Ich weiß unter welchen Voraussetzungen Lehren und Lernen stattfinden kann, plane Lehrveranstaltungen sowie Prüfungssituationen entsprechend und stelle lernförderliche Strukturen bereit.",
+                        "descriptions": [
+                            "d. h. ich kann mein Wissen weiteren Personen adäquat vermitteln. Ich weiß unter welchen Voraussetzungen Lehren und Lernen stattfinden kann, plane Lehrveranstaltungen sowie Prüfungssituationen entsprechend und stelle lernförderliche Strukturen bereit."
+                        ],
                         "multiplier": 0.6
                     },
                     {
                         "name": "Lebenslanges Lernen",
                         "characteristic": "Ich bin bereit lebenslang zu lernen",
-                        "description": "d. h. ich bin bereit mich kontinuierlich weiterbilden, z.B. hinsichtlich des Managements oder der Mitarbeiterführung, mich über neue Forschungen, Methoden etc. zu informieren und diese daraufhin anzuwenden und in meiner Forschung zu berücksichtigen.",
+                        "descriptions": [
+                            "d. h. ich bin bereit mich kontinuierlich weiterbilden, z.B. hinsichtlich des Managements oder der Mitarbeiterführung, mich über neue Forschungen, Methoden etc. zu informieren und diese daraufhin anzuwenden und in meiner Forschung zu berücksichtigen."
+                        ],
                         "multiplier": 0.5
                     },
                     {
                         "name": "Problemlösekompetenz",
                         "characteristic": "Ich verfüge über Problemlösekompetenz",
-                        "description": "d. h. ich kann und bin interessiert daran die vielfältigen Aufgaben und Probleme, mit denen ich im Berufsleben konfrontiert werde, erkennen und professionell, d. h. konstruktiv und zielorientiert lösen.",
+                        "descriptions": [
+                            "d. h. ich kann und bin interessiert daran die vielfältigen Aufgaben und Probleme, mit denen ich im Berufsleben konfrontiert werde, erkennen und professionell, d. h. konstruktiv und zielorientiert lösen."
+                        ],
                         "multiplier": 0.4
-                    }
-                ]
-            },
-            {
-                "name": "Humankompetenz",
-                "subcategories": [
-                    {
-                        "name": "Selbstbewusstsein",
-                        "characteristic": "Ich bin selbstbewusst",
-                        "description": "d. h. ich kann Lehrveranstaltungen souverän halten, ein Vorbild für weitere Personen sein, diese in ihrem Verhalten leiten, sowohl meine Person als auch meine Ideen und mein Wissen selbstbewusst vermarkten. ",
-                        "multiplier": 0.8
-                    },
-                    {
-                        "name": "Begeisterung",
-                        "characteristic": "Ich besitze Begeisterung für den Beruf",
-                        "description": "d. h. ich empfinde Begeisterung und Freude, wenn ich an eine bestimmte Thematik und Fragestellung denke und mir vorstelle neue Erkenntnisse und Wissen in diesem Bereich zu schaffen und diese/s mit weiteren Personen zu teilen und sie davon zu überzeugen.",
-                        "multiplier": 0.7
-                    },
-                    {
-                        "name": "Durchhaltevermögen",
-                        "characteristic": "Ich besitze ein ausgeprägtes Durchhaltevermögen",
-                        "description": "d. h. ich bin bereit auf meinen Wunschberuf zu warten, eine lange Phase der Unsicherheit zu Beginn meiner Karriere in Kauf zu nehmen, mehrere Wochen, Monate oder Jahre eine Forschungsfrage zu beantworten und meine Ergebnisse kontinuierlich zu überprüfen.",
-                        "multiplier": 0.6
-                    },
-                    {
-                        "name": "Selbstständigkeit",
-                        "characteristic": "Ich bin selbstständig",
-                        "description": "d. h. ich kann in den Bereichen der Forschung und Lehre autonom arbeiten, z.B. Recherchen betreiben, Untersuchungen durchführen oder Themenbereiche auswählen und vermitteln. Ich kann mich selbst organisieren, Prioritäten setzen und meine Zeit effektiv nutzen.",
-                        "multiplier": 0.6
-                    },
-                    {
-                        "name": "Zielorientierung",
-                        "characteristic": "Ich bin zielorientiert",
-                        "description": "d. h. ich kann Projekt- und Lebensziele bewusst ansteuern und umsetzen, auf das Ziel der Beantwortung der Forschungsfrage und der Erweiterung des Wissens hinarbeiten, dies auch in unsicheren Lebenslagen (z.B. in finanzieller Hinsicht) tun.",
-                        "multiplier": 0.6
-                    }
-                ]
-            },
-            {
-                "name": "Sozialkompetenz",
-                "subcategories": [
-                    {
-                        "name": "Gestaltung sozialer Beziehungen ",
-                        "characteristic": "Ich bin in der Lage soziale Beziehungen zu anderen Personen konstruktiv zu gestalten",
-                        "description": "d.h. ich kann sichere Netzwerke aufbauen, Mitarbeiter führen, weitere Personen beraten, mit ihnen diskutieren und ggf. von meiner Meinung überzeugen, meine Stellung in der Hierarchie meines Berufes verfestigen, Anerkennung und Ideen von anderen Personen annehmen.",
-                        "multiplier": 0.8
-                    },
-                    {
-                        "name": "Gestaltung von Kommunikation",
-                        "characteristic": "Ich bin in der Lage adressatengerecht mit anderen Personen zu kommunizieren",
-                        "description": "d.h. ich kann um Hilfe bitten und Hilfe anbieten, Gespräche vorbereiten und führen, vorher spezifische Fragen formulieren, Grenzen kennen, sachgerecht und zielgerichtet formulieren und konstruktives Feedback geben.",
-                        "multiplier": 0.6
-                    },
-                    {
-                        "name": "Beratungskompetenz",
-                        "characteristic": "Ich verfüge über Beratungskompetenz",
-                        "description": "d.h. ich kann untergeordnete und gleichgestellte Personen beraten, kenne verschiedene Beratungsformen und kann eigene Grenzen in Beratungsgesprächen einschätzen.",
-                        "multiplier": 0.4
-                    },
-                    {
-                        "name": "Teamfähigkeit",
-                        "characteristic": "Ich bin teamfähig",
-                        "description": "d.h. ich kann zielorientiert in einem Team arbeiten, Teammitarbeiter führen, mit ihnen interagieren, mich mit ihnen austauschen und ggf. an sie anpassen.",
-                        "multiplier": 0.3
-                    },
-                    {
-                        "name": "Feedback- und Rückmeldekompetenz",
-                        "characteristic": "Ich verfüge über Feedback- und Rückmeldekompetenz",
-                        "description": "d.h. ich kann untergeordneten und gleichgestellten Personen konstruktives Feedback geben, Leistungen adäquat bewerten, Feedback zu einer Veranstaltung einholen und evaluieren.",
-                        "multiplier": 0.2
                     }
                 ]
             }
@@ -118,101 +78,259 @@
                     {
                         "name": "Didaktisches Wissen",
                         "characteristic": "Ich habe ein ausgeprägtes didaktisches Wissen",
-                        "description": "d.h. ich kann effektiven und interessanten Unterricht adressatengerecht und zielorientiert planen, fachliche Inhalte vermitteln und dabei aus einem großen Methodenrepertoire schöpfen, analoge und digitale Medien situationsgerecht einsetzen.",
+                        "descriptions": [
+                            "d.h. ich kann effektiven und interessanten Unterricht adressatengerecht und zielorientiert planen, fachliche Inhalte vermitteln und dabei aus einem großen Methodenrepertoire schöpfen, analoge und digitale Medien situationsgerecht einsetzen."
+                        ],
                         "multiplier": 1.0
                     },
                     {
                         "name": "Fachunabhängiges Wissen",
                         "characteristic": "Ich habe ein ausgeprägtes fachunabhängiges Wissen",
-                        "description": "d.h. ich kann diagnostische Urteile fällen, gesellschaftliche, kulturelle und technologische Entwicklungen sowie rechtliche Rahmenbedingungen in den Unterricht miteinfließen lassen, mich an der Organisationsarbeit in der Schule beteiligen.",
+                        "descriptions": [
+                            "d.h. ich kann diagnostische Urteile fällen, gesellschaftliche, kulturelle und technologische Entwicklungen sowie rechtliche Rahmenbedingungen in den Unterricht miteinfließen lassen, mich an der Organisationsarbeit in der Schule beteiligen."
+                        ],
                         "multiplier": 1.0
                     },
                     {
                         "name": "Fachwissen",
                         "characteristic": "Ich habe ein ausgeprägtes Fachwissen",
-                        "description": "d.h. ich habe eine reichhaltige Wissensbasis und ein tiefes Verständnis, um Unterricht planen und gestalten sowie Inhalte fach- und sachgerecht und im Hinblick auf den Lernfortschritt erfolgreich vermitteln zu können.",
+                        "descriptions": [
+                            "d.h. ich habe eine reichhaltige Wissensbasis und ein tiefes Verständnis, um Unterricht planen und gestalten sowie Inhalte fach- und sachgerecht und im Hinblick auf den Lernfortschritt erfolgreich vermitteln zu können."
+                        ],
                         "multiplier": 1.0
                     },
                     {
                         "name": "Pädagogisches Wissen",
                         "characteristic": "Ich habe ein ausgeprägtes pädagogisches Wissen",
-                        "description": "d.h. ich kann Lernprozesse lernförderlich, motivierend, kooperativ und persönlichkeitsentfaltend im Hinblick auf die verschiedenen Voraussetzungen der SchülerInnen (Stichwort: Heterogenität) gestalten, die Interaktion und Kommunikation in der Klasse gestalten sowie Schwierigkeiten und soziale Konflikte lösen.",
+                        "descriptions": [
+                            "d.h. ich kann Lernprozesse lernförderlich, motivierend, kooperativ und persönlichkeitsentfaltend im Hinblick auf die verschiedenen Voraussetzungen der SchülerInnen (Stichwort: Heterogenität) gestalten, die Interaktion und Kommunikation in der Klasse gestalten sowie Schwierigkeiten und soziale Konflikte lösen."
+                        ],
                         "multiplier": 1.0
                     },
                     {
                         "name": "Beurteilungskompetenz",
                         "characteristic": "Ich verfüge über Beurteilungskompetenz",
-                        "description": "d.h. ich kann unterschiedliche, auch digitale Formen der Leistungsbeurteilungen einsetzen, Lernleistungen individuell anhand von Beurteilungsmaßstäben bewerten, meine Bewertung begründen, Perspektiven aufzeigen, gemeinsam mit weiteren Personen Leistungen reflektieren.",
+                        "descriptions": [
+                            "d.h. ich kann unterschiedliche, auch digitale Formen der Leistungsbeurteilungen einsetzen, Lernleistungen individuell anhand von Beurteilungsmaßstäben bewerten, meine Bewertung begründen, Perspektiven aufzeigen, gemeinsam mit weiteren Personen Leistungen reflektieren."
+                        ],
                         "multiplier": 0.75
                     }
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "type": "information",
+        "text": "Level 2",
+        "descriptions": [
+            "Humankompetenz"
+        ],
+        "descriptionsScale": 0.8,
+        "categories": []
+    },
+    {
+        "name": "Wissenschaftler",
+        "categories": [
+            {
+                "name": "Humankompetenz",
+                "subcategories": [
+                    {
+                        "name": "Selbstbewusstsein",
+                        "characteristic": "Ich bin selbstbewusst",
+                        "descriptions": [
+                            "d. h. ich kann Lehrveranstaltungen souverän halten, ein Vorbild für weitere Personen sein, diese in ihrem Verhalten leiten, sowohl meine Person als auch meine Ideen und mein Wissen selbstbewusst vermarkten."
+                        ],
+                        "multiplier": 0.8
+                    },
+                    {
+                        "name": "Begeisterung",
+                        "characteristic": "Ich besitze Begeisterung für den Beruf",
+                        "descriptions": [
+                            "d. h. ich empfinde Begeisterung und Freude, wenn ich an eine bestimmte Thematik und Fragestellung denke und mir vorstelle neue Erkenntnisse und Wissen in diesem Bereich zu schaffen und diese/s mit weiteren Personen zu teilen und sie davon zu überzeugen."
+                        ],
+                        "multiplier": 0.7
+                    },
+                    {
+                        "name": "Durchhaltevermögen",
+                        "characteristic": "Ich besitze ein ausgeprägtes Durchhaltevermögen",
+                        "descriptions": [
+                            "d. h. ich bin bereit auf meinen Wunschberuf zu warten, eine lange Phase der Unsicherheit zu Beginn meiner Karriere in Kauf zu nehmen, mehrere Wochen, Monate oder Jahre eine Forschungsfrage zu beantworten und meine Ergebnisse kontinuierlich zu überprüfen."
+                        ],
+                        "multiplier": 0.6
+                    },
+                    {
+                        "name": "Selbstständigkeit",
+                        "characteristic": "Ich bin selbstständig",
+                        "descriptions": [
+                            "d. h. ich kann in den Bereichen der Forschung und Lehre autonom arbeiten, z.B. Recherchen betreiben, Untersuchungen durchführen oder Themenbereiche auswählen und vermitteln. Ich kann mich selbst organisieren, Prioritäten setzen und meine Zeit effektiv nutzen."
+                        ],
+                        "multiplier": 0.6
+                    },
+                    {
+                        "name": "Zielorientierung",
+                        "characteristic": "Ich bin zielorientiert",
+                        "descriptions": [
+                            "d. h. ich kann Projekt- und Lebensziele bewusst ansteuern und umsetzen, auf das Ziel der Beantwortung der Forschungsfrage und der Erweiterung des Wissens hinarbeiten, dies auch in unsicheren Lebenslagen (z.B. in finanzieller Hinsicht) tun."
+                        ],
+                        "multiplier": 0.6
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Lehrkräfte",
+        "categories": [
             {
                 "name": "Humankompetenz",
                 "subcategories": [
                     {
                         "name": "Reflexionsfähigkeit",
                         "characteristic": "Ich bin reflexionsfähig",
-                        "description": "d.h. ich kann meinen Unterrichtsalltag, auch im Hinblick auf die Heterogenität der SchülerInnen, reflektieren und mich so persönlich weiterentwickeln, ich verstehe meinen Beruf als eine ständige Lernaufgabe und entwickle meine Kompetenzen kontinuierlich weiter.",
+                        "descriptions": [
+                            "d.h. ich kann meinen Unterrichtsalltag, auch im Hinblick auf die Heterogenität der SchülerInnen, reflektieren und mich so persönlich weiterentwickeln, ich verstehe meinen Beruf als eine ständige Lernaufgabe und entwickle meine Kompetenzen kontinuierlich weiter."
+                        ],
                         "multiplier": 1.0
                     },
                     {
                         "name": "Innovationskompetenz",
                         "characteristic": "Ich verfüge über Innovationskompetenz",
-                        "description": "d.h. ich kann neue Ergebnisse der Bildungs- und Schulforschung für meine eigene Tätigkeit nutzen, Rückmeldungen geben, erhalten und evaluieren, um meine pädagogische Arbeit zu optimieren, die Qualität von Schule und Unterricht ständig weiterentwickeln.",
+                        "descriptions": [
+                            "d.h. ich kann neue Ergebnisse der Bildungs- und Schulforschung für meine eigene Tätigkeit nutzen, Rückmeldungen geben, erhalten und evaluieren, um meine pädagogische Arbeit zu optimieren, die Qualität von Schule und Unterricht ständig weiterentwickeln."
+                        ],
                         "multiplier": 0.75
                     },
                     {
                         "name": "Kritikfähigkeit",
                         "characteristic": "Ich bin kritikfähig",
-                        "description": "d.h. ich kann 'Misserfolge' und Rückmeldungen anderer als Anstoß zur Evaluation und persönlichen Weiterentwicklung nutzen.",
+                        "descriptions": [
+                            "d.h. ich kann 'Misserfolge' und Rückmeldungen anderer als Anstoß zur Evaluation und persönlichen Weiterentwicklung nutzen."
+                        ],
                         "multiplier": 0.75
                     },
                     {
                         "name": "Selbstständigkeit",
                         "characteristic": "Ich bin selbstständig",
-                        "description": "d.h. ich kann in meinem beruflichen Alltag autonom mit meinen Ressourcen umgehen, Unterricht (resp. Materialien, Methoden, Medien, Interaktionsformen) eigenständig gestalten und meine Kompetenzen erweitern.",
+                        "descriptions": [
+                            "d.h. ich kann in meinem beruflichen Alltag autonom mit meinen Ressourcen umgehen, Unterricht (resp. Materialien, Methoden, Medien, Interaktionsformen) eigenständig gestalten und meine Kompetenzen erweitern."
+                        ],
                         "multiplier": 0.75
                     },
                     {
                         "name": "Begeisterung",
                         "characteristic": "Ich besitze Begeisterung für den Beruf",
-                        "description": "d. h. ich empfinde Begeisterung und Freude, wenn ich mir vorstelle, mit den SchülerInnen zu interagieren, flexibel auf ihre Ideen zu reagieren und in schwierigen Situationen für sie da zu sein, mich mit KollegInnen offen auszutauschen, die Inhalte meiner Fächer zu gestalten und zu vermitteln.",
+                        "descriptions": [
+                            "d. h. ich empfinde Begeisterung und Freude, wenn ich mir vorstelle, mit den SchülerInnen zu interagieren, flexibel auf ihre Ideen zu reagieren und in schwierigen Situationen für sie da zu sein, mich mit KollegInnen offen auszutauschen, die Inhalte meiner Fächer zu gestalten und zu vermitteln."
+                        ],
                         "multiplier": 0.5
                     }
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "type": "information",
+        "text": "Level 3",
+        "descriptions": [
+            "Sozialkompetenz"
+        ],
+        "descriptionsScale": 0.8,
+        "categories": []
+    },
+    {
+        "name": "Wissenschaftler",
+        "categories": [
+            {
+                "name": "Sozialkompetenz",
+                "subcategories": [
+                    {
+                        "name": "Gestaltung sozialer Beziehungen ",
+                        "characteristic": "Ich bin in der Lage soziale Beziehungen zu anderen Personen konstruktiv zu gestalten",
+                        "descriptions": [
+                            "d.h. ich kann sichere Netzwerke aufbauen, Mitarbeiter führen, weitere Personen beraten, mit ihnen diskutieren und ggf. von meiner Meinung überzeugen, meine Stellung in der Hierarchie meines Berufes verfestigen, Anerkennung und Ideen von anderen Personen annehmen."
+                        ],
+                        "multiplier": 0.8
+                    },
+                    {
+                        "name": "Gestaltung von Kommunikation",
+                        "characteristic": "Ich bin in der Lage adressatengerecht mit anderen Personen zu kommunizieren",
+                        "descriptions": [
+                            "d.h. ich kann um Hilfe bitten und Hilfe anbieten, Gespräche vorbereiten und führen, vorher spezifische Fragen formulieren, Grenzen kennen, sachgerecht und zielgerichtet formulieren und konstruktives Feedback geben."
+                        ],
+                        "multiplier": 0.6
+                    },
+                    {
+                        "name": "Beratungskompetenz",
+                        "characteristic": "Ich verfüge über Beratungskompetenz",
+                        "descriptions": [
+                            "d.h. ich kann untergeordnete und gleichgestellte Personen beraten, kenne verschiedene Beratungsformen und kann eigene Grenzen in Beratungsgesprächen einschätzen."
+                        ],
+                        "multiplier": 0.4
+                    },
+                    {
+                        "name": "Teamfähigkeit",
+                        "characteristic": "Ich bin teamfähig",
+                        "descriptions": [
+                            "d.h. ich kann zielorientiert in einem Team arbeiten, Teammitarbeiter führen, mit ihnen interagieren, mich mit ihnen austauschen und ggf. an sie anpassen."
+                        ],
+                        "multiplier": 0.3
+                    },
+                    {
+                        "name": "Feedback- und Rückmeldekompetenz",
+                        "characteristic": "Ich verfüge über Feedback- und Rückmeldekompetenz",
+                        "descriptions": [
+                            "d.h. ich kann untergeordneten und gleichgestellten Personen konstruktives Feedback geben, Leistungen adäquat bewerten, Feedback zu einer Veranstaltung einholen und evaluieren."
+                        ],
+                        "multiplier": 0.2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Lehrkräfte",
+        "categories": [
             {
                 "name": "Sozialkompetenz",
                 "subcategories": [
                     {
                         "name": "Beratungskompetenz",
                         "characteristic": "Ich verfüge über Beratungskompetenz",
-                        "description": "d.h. ich kann SchülerInnen und Eltern sowohl zum persönlichen Lernfortschritt, zur weiteren Schullaufbahn als auch zu persönlichen Problemen beraten, kenne verschiedene Prinzipien, Ansätze und Formen von Beratungsgesprächen und weiß, wann ich die Zuständigkeit an weitere Akteure weitergeben sollte.",
+                        "descriptions": [
+                            "d.h. ich kann SchülerInnen und Eltern sowohl zum persönlichen Lernfortschritt, zur weiteren Schullaufbahn als auch zu persönlichen Problemen beraten, kenne verschiedene Prinzipien, Ansätze und Formen von Beratungsgesprächen und weiß, wann ich die Zuständigkeit an weitere Akteure weitergeben sollte."
+                        ],
                         "multiplier": 1.0
                     },
                     {
                         "name": "Gestaltung sozialer Beziehungen",
                         "characteristic": "Ich bin in der Lage soziale Beziehungen zu anderen Personen konstruktiv zu gestalten",
-                        "description": "d.h. ich kann jederzeit für die SchülerInnen als Zuhörer, Ratgeber oder Helfer bei Problemen da sein, konstruktive Rückmeldungen an KollegInnen geben, mich an der Schulgemeinschaft beteiligen, Kontakte zu außerschulischen Akteuren herstellen, mit diesen kooperieren und bei Beratungen hinzuziehen und mit Eltern vertrauensvoll zusammenarbeiten.",
+                        "descriptions": [
+                            "d.h. ich kann jederzeit für die SchülerInnen als Zuhörer, Ratgeber oder Helfer bei Problemen da sein, konstruktive Rückmeldungen an KollegInnen geben, mich an der Schulgemeinschaft beteiligen, Kontakte zu außerschulischen Akteuren herstellen, mit diesen kooperieren und bei Beratungen hinzuziehen und mit Eltern vertrauensvoll zusammenarbeiten."
+                        ],
                         "multiplier": 0.75
                     },
                     {
                         "name": "Gestaltung von Kommunikation",
                         "characteristic": "Ich bin in der Lage adressatengerecht anderen Personen zu kommunizieren",
-                        "description": "d.h. ich kann mit den SchülerInnen innerhalb und außerhalb des Unterrichts situationsgerecht kommunizieren, verschiedene Formen der Kommunikation (nonverbal, verbal, schriftlich, visuell) lernförderlich und zur Sicherung von Teilhabe anwenden.",
+                        "descriptions": [
+                            "d.h. ich kann mit den SchülerInnen innerhalb und außerhalb des Unterrichts situationsgerecht kommunizieren, verschiedene Formen der Kommunikation (nonverbal, verbal, schriftlich, visuell) lernförderlich und zur Sicherung von Teilhabe anwenden."
+                        ],
                         "multiplier": 0.75
                     },
                     {
                         "name": "Konflikt- und Problemlösekompetenz",
                         "characteristic": "Ich verfüge über Konflikt- und Problemlösekompetenz",
-                        "description": "d.h. ich kann Problemsituationen souverän lösen, mit den Eltern Lösungen für Erziehungsprobleme oder misslingende Lernprozesse finden, Methoden der konstruktiven Konfliktprävention, -bearbeitung und -lösung sowie des Umgangs mit Gewalt und Diskriminierung anwenden.",
+                        "descriptions": [
+                            "d.h. ich kann Problemsituationen souverän lösen, mit den Eltern Lösungen für Erziehungsprobleme oder misslingende Lernprozesse finden, Methoden der konstruktiven Konfliktprävention, -bearbeitung und -lösung sowie des Umgangs mit Gewalt und Diskriminierung anwenden."
+                        ],
                         "multiplier": 0.75
                     },
                     {
                         "name": "Feedback- und Rückmeldekompetenz",
                         "characteristic": "Ich verfüge über Feedback- und Rückmeldekompetenz",
-                        "description": "d.h. ich kann KollegInnen Rückmeldungen zu ihrer Arbeit geben, Rückmeldungen erhalten und reflektieren, den SchülerInnen individuelle und prozessbegleitende Rückmeldungen zu Lernfortschritten, Leistungen sowie ihren persönlichen Stärken und Schwächen geben.",
+                        "descriptions": [
+                            "d.h. ich kann KollegInnen Rückmeldungen zu ihrer Arbeit geben, Rückmeldungen erhalten und reflektieren, den SchülerInnen individuelle und prozessbegleitende Rückmeldungen zu Lernfortschritten, Leistungen sowie ihren persönlichen Stärken und Schwächen geben."
+                        ],
                         "multiplier": 0.5
                     }
                 ]

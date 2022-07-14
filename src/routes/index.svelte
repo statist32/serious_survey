@@ -4,7 +4,7 @@
 	 */
 	import { elasticOut } from 'svelte/easing';
 	import { tweened } from 'svelte/motion';
-	import { RGB_PVRTC_2BPPV1_Format, SphereBufferGeometry } from 'three';
+	import { SphereBufferGeometry } from 'three';
 	import { Canvas, PerspectiveCamera, Mesh } from 'threlte';
 	import { atoms } from './_routeLib/stores';
 	import Hydrogen from './_routeLib/Hydrogen.svelte';
@@ -21,42 +21,44 @@
 		cameraX.set(mapLinear(evt.clientX / window.innerWidth, 0, 1, -5, 5));
 		cameraY.set(mapLinear(evt.clientY / window.innerHeight, 0, 1, 5, -5));
 	}
-	let answeredQuestionsAmount = 0;
-	let surveyIsOver = false;
-	let question = 'Willkommen zu meinem Spiel :)';
-	let description = 'Drücke auf eine Antwort, um zu starten.';
+
 	let scale = tweened(DEFAULT_TEXT_SCALE, { easing: elasticOut, delay: 200 });
 
 	let counters = { Lehrkräfte: {}, Wissenschaftler: {} };
 
 	function* nextQuestion() {
 		for (let question of questions) {
+			if (question.type === 'information') {
+				yield {
+					itemName: question.text,
+					itemDescriptions: question.descriptions,
+					subcategoryName: 'subcategory?.name',
+					categoryName: 'category?.name',
+					jobName: 'question?.name',
+					multiplier: 0,
+					descriptionScale: question?.descriptionScale || 1
+				};
+			}
 			for (let category of question.categories) {
 				for (let subcategory of category.subcategories) {
 					yield {
-						itemName: subcategory.characteristic,
-						itemDescripion: subcategory.description,
-						subcategoryName: subcategory.name,
-						categoryName: category.name,
-						jobName: question.name,
-						multiplier: subcategory.multiplier
+						itemName: subcategory?.characteristic,
+						itemDescriptions: subcategory?.descriptions,
+						subcategoryName: subcategory?.name,
+						categoryName: category?.name,
+						jobName: question?.name,
+						multiplier: subcategory?.multiplier,
+						descriptionScale: question?.descriptionScale || 1
 					};
 				}
 			}
 		}
-		// display end
 	}
+
 	const nxQ = nextQuestion();
-	let currentQuestion = {
-		itemName: 'a',
-		itemDescripion: 'a',
-		subcategoryName: 'a',
-		categoryName: 'a',
-		jobName: 'a',
-		multiplier: 0
-	};
+	let currentQuestion = nxQ.next().value;
+
 	function handleAnwerSelected(event: any) {
-		// answeredQuestionsAmount++;
 		if (!counters.hasOwnProperty(currentQuestion.jobName)) {
 			counters[currentQuestion.jobName] = {};
 		}
@@ -66,13 +68,11 @@
 		counters[currentQuestion.jobName][currentQuestion.categoryName] +=
 			event.detail.value * currentQuestion.multiplier;
 
-		currentQuestion = nxQ.next();
 		if (!currentQuestion.done) {
-			currentQuestion = currentQuestion.value;
+			// currentQuestion = currentQuestion.value;
 			scale
 				.set(0)
-				.then(() => (question = currentQuestion.itemName))
-				.then(() => (description = currentQuestion.itemDescripion))
+				.then(() => (currentQuestion = nxQ.next().value))
 				.then(() => scale.set(DEFAULT_TEXT_SCALE));
 		}
 	}
@@ -105,14 +105,21 @@
 		<PerspectiveCamera position={{ x: $cameraX, y: $cameraY, z: 20 }} fov={24} near={0.5} />
 		<Mesh geometry={new SphereBufferGeometry()} material={backgroundMaterial} scale={100} />
 		{#if !currentQuestion.done}
-			<!-- BACKGROUND -->
-
-			<Text text={question} scale={{ x: $scale, y: $scale }} position={{ x: 0, y: 1, z: 1 }} />
 			<Text
-				text={description}
-				scale={{ x: $scale * 0.5, y: $scale * 0.5 }}
-				position={{ x: 0, y: 0, z: 1 }}
+				text={currentQuestion.itemName}
+				scale={{ x: $scale, y: $scale }}
+				position={{ x: 0, y: 1, z: 1 }}
 			/>
+			{#each currentQuestion.itemDescriptions as description, index}
+				<Text
+					text={description}
+					scale={{
+						x: $scale * 0.5 * currentQuestion.descriptionScale,
+						y: $scale * 0.5 * currentQuestion.descriptionScale
+					}}
+					position={{ x: 0, y: -0.8 * index * currentQuestion.descriptionScale, z: 1 }}
+				/>
+			{/each}
 			<!-- ATOMS -->
 			{#each $atoms as atom (atom.id)}
 				<Hydrogen
