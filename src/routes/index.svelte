@@ -15,6 +15,8 @@
 	const GAME_FINISHED_TEXT_3 = 'Übereinstimmung in den einzelnen Kompetenzen';
 	const GAME_FINISHED_TEXT_4 =
 		'Bitte machen Sie nun einen Screenshot von dieser Seite und kehren Sie zur Umfrage zurück!';
+	const COMPETENCES = ['Fachkompetenz', 'Humankompetenz', 'Sozialkompetenz'];
+	const PROFESSIONS = ['Lehrkraft', 'WissenschaftlerIn'];
 
 	const DEFAULT_TEXT_SCALE = 4;
 	const cameraX = tweened(0, { duration: 500, easing: quintOut });
@@ -95,8 +97,6 @@
 		}
 		return maxScore;
 	}
-	const COMPETENCES = ['Fachkompetenz', 'Humankompetenz', 'Sozialkompetenz'];
-	const PROFESSIONS = ['Lehrkraft', 'WissenschaftlerIn'];
 	const maxScore = calcMax();
 
 	function calcProfessionPercentage(professionCounters, professionMax) {
