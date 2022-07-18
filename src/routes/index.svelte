@@ -3,13 +3,14 @@
 	import { tweened } from 'svelte/motion';
 	import { SphereBufferGeometry } from 'three';
 	import { Canvas, PerspectiveCamera, Mesh } from 'threlte';
-	import { atoms } from './_routeLib/stores';
 	import Hydrogen from './_routeLib/Hydrogen.svelte';
 	import Text from './_routeLib/Text.svelte';
 	import { backgroundMaterial } from './_routeLib/materials';
 	import { mapLinear } from 'three/src/math/MathUtils';
 	import { quintOut } from 'svelte/easing';
 	import questions from './questions.json';
+	import * as THREE from 'three';
+
 	const GAME_FINISHED_TEXT_1 = 'Ihr Ergebnis:';
 	const GAME_FINISHED_TEXT_2 = 'Übereinstimmung zum Beruf';
 	const GAME_FINISHED_TEXT_3 = 'Übereinstimmung in den einzelnen Kompetenzen';
@@ -17,6 +18,15 @@
 		'Bitte machen Sie nun einen Screenshot von dieser Seite und kehren Sie zur Umfrage zurück!';
 	const COMPETENCES = ['Fachkompetenz', 'Humankompetenz', 'Sozialkompetenz'];
 	const PROFESSIONS = ['Lehrkraft', 'WissenschaftlerIn'];
+
+	const ANSWER_TEXTS = [
+		{ value: 5, answer_text: 'Stimme voll und ganz zu', position: new THREE.Vector4(-4, 3, 1) },
+		{ value: 4, answer_text: 'Stimme zu', position: new THREE.Vector4(0, 4, 1) },
+		{ value: 3, answer_text: 'Stimme eher zu', position: new THREE.Vector4(4, 3, 1) },
+		{ value: 2, answer_text: 'Stimme eher nicht zu', position: new THREE.Vector4(4, -3, 1) },
+		{ value: 1, answer_text: 'Stimme nicht zu', position: new THREE.Vector4(0, -4, 1) },
+		{ value: 0, answer_text: 'Stimme überhaupt nicht zu', position: new THREE.Vector4(-4, -3, 1) }
+	];
 
 	const DEFAULT_TEXT_SCALE = 4;
 	const cameraX = tweened(0, { duration: 500, easing: quintOut });
@@ -40,7 +50,8 @@
 					categoryName: 'category?.name',
 					jobName: 'question?.name',
 					multiplier: 0,
-					descriptionScale: question?.descriptionScale || 1
+					descriptionScale: question?.descriptionScale || 1,
+					answers: ANSWER_TEXTS.map((answer) => ({ ...answer, answer_text: 'Fortfahren' }))
 				};
 			}
 			for (let category of question.categories) {
@@ -52,7 +63,8 @@
 						categoryName: category?.name,
 						jobName: question?.name,
 						multiplier: subcategory?.multiplier,
-						descriptionScale: question?.descriptionScale || 1
+						descriptionScale: question?.descriptionScale || 1,
+						answers: ANSWER_TEXTS
 					};
 				}
 			}
@@ -108,8 +120,7 @@
 			(prev, current) => (prev += current[1]),
 			0
 		);
-		// console.log(professionCounters);
-		// console.log(sumProfession, maxSumProfession);
+
 		return ((100 * sumProfession) / maxSumProfession).toFixed(1);
 	}
 </script>
@@ -135,9 +146,10 @@
 				/>
 			{/each}
 			<!-- ATOMS -->
-			{#each $atoms as atom (atom.id)}
+
+			{#each currentQuestion.answers as answer}
 				<Hydrogen
-					{...atom}
+					{...answer}
 					on:answerSelected={handleAnwerSelected}
 					scale={{ x: $scale, y: $scale }}
 				/>
