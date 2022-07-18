@@ -10,8 +10,8 @@
 	const PROFESSIONS = ['Lehrkraft', 'WissenschaftlerIn'];
 
 	export let scale;
-	export let counters;
-	export let questions;
+	export let counters: any;
+	export let questions: any;
 
 	function calcMax() {
 		const MAX_ANSWER_VALUE = 5;

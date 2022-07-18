@@ -43,8 +43,8 @@
 					categoryName: 'category?.name',
 					jobName: 'question?.name',
 					multiplier: 0,
-					descriptionScale: question?.descriptionScale || 1,
-					answers: ANSWER_TEXTS.map((answer) => ({ ...answer, answer_text: 'Fortfahren' }))
+					descriptionScale: question?.descriptionsScale || 1,
+					answers: ANSWER_TEXTS.map((answer) => ({ ...answer, answer_text: 'Start' }))
 				};
 			}
 			for (let category of question.categories) {
@@ -56,7 +56,7 @@
 						categoryName: category?.name,
 						jobName: question?.name,
 						multiplier: subcategory?.multiplier,
-						descriptionScale: question?.descriptionScale || 1,
+						descriptionScale: question?.descriptionsScale || 1,
 						answers: ANSWER_TEXTS
 					};
 				}
