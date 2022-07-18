@@ -12,6 +12,7 @@
 	export let scale;
 	export let counters;
 	export let questions;
+
 	function calcMax() {
 		const MAX_ANSWER_VALUE = 5;
 		let maxScore = { Lehrkraft: {}, WissenschaftlerIn: {} };
